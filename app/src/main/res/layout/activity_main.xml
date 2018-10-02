@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edittext"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/refreshbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="Pi NewsReader\nPiStudios 2017-2018\npistudiosofficial@gmail.com"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/refreshbutton" />
+
+    <Button
+        android:id="@+id/refreshbutton"
+        android:layout_width="91dp"
+        android:layout_height="43dp"
+        android:background="@android:color/black"
+        android:onClick="onRefresh"
+        android:text="Refresh"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/aboutbutton"
+        android:layout_width="91dp"
+        android:layout_height="43dp"
+        android:background="@android:color/black"
+        android:onClick="onAbout"
+        android:text="About"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:text="LOADING..."
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/refreshbutton"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+</android.support.constraint.ConstraintLayout>
